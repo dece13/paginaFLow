@@ -1,0 +1,230 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #b6e2f0, #9cc3d5);
+}
+.center-container {
+    text-align: center;
+}
+
+.flower{
+    position: relative;
+    display: inline-block;
+    margin-top: 10%;
+    animation: drawFlower 9s infinite; /* Aplicamos la animación */
+}
+.flower_head{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background: #fff539;
+    margin-top: 50px;
+}
+.flower_head::after,
+.flower_head::before{
+    position: absolute;
+    content: '';
+    background: #fff539;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    transform: rotate(60deg);
+}
+.flower_head::before{
+    animation: drawHead 9s infinite; /* Aplicamos la animación */
+    transform: rotate(-60deg);
+}
+.flower_mid{
+    animation: drawMid 9s infinite; /* Aplicamos la animación */
+    position: absolute;
+    background: brown;
+    height: 15px;
+    width: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 9;
+    top: 61px;
+    border-radius: 50%;
+}
+.flower_stick{
+    animation: drawStick 9s infinite; /* Aplicamos la animación */
+    position: absolute;
+    height: 150px;
+    width: 8px;
+    background: #5d8233;
+    border-radius: 4px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+.flower_leaf{
+    animation: drawLeaf 9s infinite; /* Aplicamos la animación */
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #5d8233;
+    top: 130px;
+    left: 22px;
+    border-radius: 50px;
+    border-bottom-right-radius: 0;
+    transform: rotate(-20deg);
+    border-top-left-radius: 0px;
+}
+.flower_leaf.secflower{
+    animation: drawLeaf 9s infinite; /* Aplicamos la animación */
+    top: 150px;
+    left: 69px;
+    transform: rotate(123deg);
+}
+.flower_vessel{
+    animation: drawVassel 9s infinite; /* Aplicamos la animación */
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background: #d54c4c;
+    top: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.flower_vessel_bottom{
+    position: absolute;
+    width: 50px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 50px solid #8d2828;
+    top: 20px;
+    z-index: -1;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+
+@keyframes drawFlower {
+    0%, 10% {
+        opacity: 0;
+    }
+    20%, 30% {
+        opacity: 1;
+    }
+    40%, 50% {
+        opacity: 1;
+    }
+    60%, 70% {
+        opacity: 1;
+    }
+    80%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        animation-delay: 3.5s;
+    }
+}
+@keyframes drawHead {
+    0%, 10% {
+        opacity: 0;
+    }
+    20%, 30% {
+        opacity: 1;
+    }
+    40%, 50% {
+        opacity: 1;
+    }
+    60%, 70% {
+        opacity: 1;
+    }
+    80%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        animation-delay: 3.5s;
+    }
+}
+@keyframes drawMid {
+    0%, 10% {
+        opacity: 0;
+    }
+    20%, 30% {
+        opacity: 0;
+    }
+    40%, 50% {
+        opacity: 1;
+    }
+    60%, 70% {
+        opacity: 1;
+    }
+    80%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        animation-delay: 3.5s;
+    }
+}
+@keyframes drawStick {
+    0%, 10% {
+        opacity: 0;
+    }
+    20%, 30% {
+        opacity: 0;
+    }
+    40%, 50% {
+        opacity: 0;
+    }
+    60%, 70% {
+        opacity: 1;
+    }
+    80%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        animation-delay: 3.5s;
+    }
+}
+@keyframes drawLeaf {
+    0%, 10% {
+        opacity: 0;
+    }
+    20%, 30% {
+        opacity: 0;
+    }
+    40%, 50% {
+        opacity: 0;
+    }
+    60%, 70% {
+        opacity: 0;
+    }
+    80%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        animation-delay: 3.5s;
+    }
+}
+@keyframes drawVassel {
+    0%, 10% {
+        opacity: 0;
+    }
+    20%, 30% {
+        opacity: 0;
+    }
+    40%, 50% {
+        opacity: 0;
+    }
+    60%, 70% {
+        opacity: 0;
+    }
+    80%, 90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        animation-delay: 3.5s;
+    }
+}
